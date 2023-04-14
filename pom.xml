@@ -14,4 +14,8 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <modules>
+        <module>r2dbc-sample</module>
+    </modules>
+
 </project>
