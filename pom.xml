@@ -16,6 +16,7 @@
 
     <modules>
         <module>r2dbc-sample</module>
+        <module>web-sample</module>
     </modules>
 
 </project>

@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+# 日志配置
+logging:
+  level:
+    org.springframework: debug
+    org.epha.web: debug
