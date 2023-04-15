@@ -19,3 +19,4 @@
 - **获取cookie**。[示例](src/main/java/org/epha/web/controller/CookieController.java)
 - **ConfigurationProperties绑定配置文件**。[示例](src/main/java/org/epha/web/configuration/properties/PppProperties.java)
 - **i18n使用**。[示例](src/main/java/org/epha/web/configuration/I18nConfiguration.java)
+- **thymleaf使用**。[示例](src/main/java/org/epha/web/controller/ThymleafController.java)
