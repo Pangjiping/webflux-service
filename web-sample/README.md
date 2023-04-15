@@ -17,3 +17,4 @@
 - **上传文件**。[示例](src/main/java/org/epha/web/controller/UploadController.java)
 - **获取session**。[示例](src/main/java/org/epha/web/controller/SessionController.java)
 - **获取cookie**。[示例](src/main/java/org/epha/web/controller/CookieController.java)
+- **ConfigurationProperties绑定配置文件**。[示例](src/main/java/org/epha/web/configuration/properties/PppProperties.java)
