@@ -15,3 +15,5 @@
 - **mapstruct使用**。[示例](src/main/java/org/epha/web/mapper/PlayerMapper.java)
 - **下载文件**。[示例](src/main/java/org/epha/web/controller/DownloadController.java)
 - **上传文件**。[示例](src/main/java/org/epha/web/controller/UploadController.java)
+- **获取session**。[示例](src/main/java/org/epha/web/controller/SessionController.java)
+- **获取cookie**。[示例](src/main/java/org/epha/web/controller/CookieController.java)
