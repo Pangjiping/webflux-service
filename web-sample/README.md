@@ -12,3 +12,4 @@
     - 可以自定义uri pattern，比如增加一个前缀asserts。http://localhost:8081/assets/images/reactive.png
     - 配置http静态资源缓存
 - **配置CORS**。[示例](src/main/java/org/epha/web/configuration/CorsConfiguration.java)
+- **mapstruct使用**。[示例](src/main/java/org/epha/web/mapper/PlayerMapper.java)
