@@ -22,3 +22,4 @@
 - **thymleaf使用**。[示例](src/main/java/org/epha/web/controller/ThymleafController.java)
 - **`WebFilter`使用**。[示例](src/main/java/org/epha/web/filter/AuthWebFilter.java)
 - **自定义全局异常处理**。[示例](src/main/java/org/epha/web/exception)
+- **自定义校验注解和校验器**。[示例](src/main/java/org/epha/web/validator)
