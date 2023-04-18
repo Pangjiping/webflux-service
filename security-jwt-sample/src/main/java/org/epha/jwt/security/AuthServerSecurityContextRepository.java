@@ -1,0 +1,45 @@
+package org.epha.jwt.security;
+
+import org.epha.jwt.security.model.AnonymousAuthentication;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextImpl;
+import org.springframework.security.web.server.context.ServerSecurityContextRepository;
+import org.springframework.web.server.ServerWebExchange;
+import reactor.core.publisher.Mono;
+
+import java.util.Map;
+
+/**
+ * @author pangjiping
+ */
+public class AuthServerSecurityContextRepository implements ServerSecurityContextRepository {
+
+    private static final String SECURITY_CONTEXT_KEY = "SPRING_SECURITY_CONTEXT";
+
+    private static final Authentication ANONYMOUS = new AnonymousAuthentication();
+
+    @Override
+    public Mono<Void> save(ServerWebExchange exchange, SecurityContext securityContext) {
+        return Mono.fromRunnable(() -> {
+            Map<String, Object> attributes = exchange.getAttributes();
+            if (securityContext == null) {
+                attributes.remove(SECURITY_CONTEXT_KEY);
+            } else {
+                attributes.put(SECURITY_CONTEXT_KEY, securityContext);
+            }
+        });
+    }
+
+    @Override
+    public Mono<SecurityContext> load(ServerWebExchange exchange) {
+        return Mono.fromCallable(() -> {
+            SecurityContext securityContext = (SecurityContext) exchange.getAttributes().get(SECURITY_CONTEXT_KEY);
+            if (securityContext == null) {
+                return new SecurityContextImpl(ANONYMOUS);
+            }
+            return securityContext;
+        });
+    }
+
+}

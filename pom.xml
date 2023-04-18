@@ -17,6 +17,13 @@
     <modules>
         <module>r2dbc-sample</module>
         <module>web-sample</module>
+        <module>security-sample</module>
+        <module>security-authority-sample</module>
+        <module>security-jwt-sample</module>
+        <module>error-handle-sample</module>
+        <module>validation-sample</module>
+        <module>swagger-sample</module>
+        <module>websocket-sample</module>
     </modules>
 
 </project>

@@ -1,8 +1,6 @@
 package org.epha.web.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.epha.web.exception.BizCodeEnum;
-import org.epha.web.exception.BizException;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
@@ -78,6 +76,6 @@ public class DownloadController {
                 callback.error(ex);
             }
         })
-                .switchIfEmpty(Mono.error(new BizException(BizCodeEnum.RESOURCE_NOT_FOUND)));
+                .switchIfEmpty(Mono.error(new RuntimeException("not found")));
     }
 }
